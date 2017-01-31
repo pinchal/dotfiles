@@ -1,18 +1,23 @@
-# Path to my oh-my-zsh installation.
-export ZSH=~/dotfiles/oh-my-zsh
+export TERM="xterm-256color"
 
-# My theme
-ZSH_THEME="gnzh"
+# Antigen rocks
+source /usr/share/zsh-antigen/antigen.zsh
 
-# When I want, if I want
-DISABLE_AUTO_UPDATE="true"
 
-# Please correct me
-ENABLE_CORRECTION="true"
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle arzzen/calc.plugin.zsh
+antigen bundle Tarrasch/zsh-command-not-found
+antigen bundle hcgraf/zsh-sudo
 
-# zsh plugins
-plugins=(git)
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
-source $ZSH/oh-my-zsh.sh
-eval "$(thefuck --alias)"
+# Configuration du theme powerlevel9k
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="╭─ "
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="╰─➤ "
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
