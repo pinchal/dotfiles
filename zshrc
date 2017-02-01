@@ -6,18 +6,15 @@ source /usr/share/zsh-antigen/antigen.zsh
 
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle arzzen/calc.plugin.zsh
 antigen bundle Tarrasch/zsh-command-not-found
 antigen bundle hcgraf/zsh-sudo
 
-antigen theme bhilburn/powerlevel9k powerlevel9k
+# nécessaire pour spaceship
+antigen use oh-my-zsh
 
-# Configuration du theme powerlevel9k
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# theme super cool, custom : https://github.com/denysdovhan/spaceship-zsh-theme
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="╭─ "
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="╰─➤ "
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
+antigen apply
