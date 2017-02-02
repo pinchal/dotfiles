@@ -1,11 +1,17 @@
-- clean: ['~']
+- clean: ['~', ]
 
 - defaults:
     link:
         force: true
+        create: true
+        relative: true
 
 - link:
-    ~/.vimrc: vimrc
+    ~/.vimrc:                  vim/vimrc
+    ~/.vim/bundle/Vundle.vim : vim/Vundle.vim
+    ~/.vim/maconfig.vim :      vim/maconfig.vim
+    ~/.vim/pluginlist.vim :    vim/pluginlist.vim
+
     ~/.zshrc: zshrc
 
 - shell:
