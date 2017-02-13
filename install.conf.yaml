@@ -7,12 +7,12 @@
         relative: true
 
 - link:
-    ~/.vimrc:                  vim/vimrc
-    ~/.vim/bundle/Vundle.vim : vim/Vundle.vim
-    ~/.vim/maconfig.vim :      vim/maconfig.vim
-    ~/.vim/pluginlist.vim :    vim/pluginlist.vim
+    ~/.vimrc:                  vimrc
+    ~/.vim : vim
 
     ~/.zshrc: zshrc
+
+    ~/.tmux.conf: tmux.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
