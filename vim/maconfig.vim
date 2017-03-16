@@ -80,5 +80,7 @@ set showbreak=↪
 
 noremap  <F2> :NERDTreeToggle<CR>
 
+" F7 mappé sur flake8
+
 " clipboard on system
 set clipboard=unnamed
