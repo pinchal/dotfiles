@@ -18,3 +18,5 @@ antigen use oh-my-zsh
 antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
 antigen apply
+
+eval "$(thefuck --alias)"

@@ -67,12 +67,6 @@ vnoremap <F4> <C-o>:call <SID>spell_en()<CR>
 " nmap <leader>h :bprevious<CR>
 " nmap <leader>bq :bp <BAR> bd #<CR>
 
-" Anti noob
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-
 " show invisible characters
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
@@ -81,6 +75,8 @@ set showbreak=↪
 noremap  <F2> :NERDTreeToggle<CR>
 
 " F7 mappé sur flake8
+
+nnoremap <C-c> :bp\|bd #<CR>
 
 " clipboard on system
 set clipboard=unnamed
