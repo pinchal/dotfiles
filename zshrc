@@ -16,6 +16,7 @@ antigen use oh-my-zsh
 
 # theme super cool, custom : https://github.com/denysdovhan/spaceship-zsh-theme
 antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
+SPACESHIP_BATTERY_SHOW=false
 
 antigen apply
 
