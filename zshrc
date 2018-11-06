@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 
-dotfile_dir=${0:a:h}
+dotfile_dir="$(dirname "$(readlink -f ~/.zshrc)")"
 
 # Antigen rocks
 source ${dotfile_dir}/zsh/antigen/antigen.zsh
