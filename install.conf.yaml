@@ -7,12 +7,10 @@
         relative: true
 
 - link:
-    ~/.vimrc:                  vimrc
-    ~/.vim : vim
-
+    ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-
     ~/.tmux.conf: tmux.conf
+    ~/.htoprc: htoprc
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive, Installing submodules]

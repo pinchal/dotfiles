@@ -1,13 +1,13 @@
 export TERM="xterm-256color"
 
-# Antigen rocks
-source /usr/share/zsh-antigen/antigen.zsh
+dotfile_dir=${0:a:h}
 
+# Antigen rocks
+source ${dotfile_dir}/zsh/antigen/antigen.zsh
 
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle arzzen/calc.plugin.zsh
 antigen bundle Tarrasch/zsh-command-not-found
 antigen bundle hcgraf/zsh-sudo
 
@@ -20,4 +20,4 @@ SPACESHIP_BATTERY_SHOW=false
 
 antigen apply
 
-eval "$(thefuck --alias)"
+command -v thefuck 2>&1 >/dev/null && eval "$(thefuck --alias)"

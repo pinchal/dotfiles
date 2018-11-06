@@ -2,44 +2,6 @@
 
 set -e
 
-error()
-{
-    tput setaf 1
-    echo "** $@ **" >&2
-    tput sgr0
-    exit 1
-}
-
-success()
-{
-    tput setaf 2
-    echo "-- $@"
-    tput sgr0
-}
-
-notice()
-{
-    tput setaf 6
-    echo "-- $@"
-    tput sgr0
-}
-
-outils_dev=false
-
-while [[ $# > 0 ]]
-do
-    option=$1
-    case $option in
-        --dev)
-            outils_dev=true
-            ;;
-        *)
-            error Option $1 inconnue
-            ;;
-    esac
-    shift
-done
-
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
@@ -50,14 +12,3 @@ cd "${BASEDIR}"
 git submodule update --init --recursive 
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-
-# Installation YouCompleteMe
-notice Installation du plugin vim YouCompleteMe
-if ${outils_dev}
-then
-    notice -- Avec support clang
-    ${BASEDIR}/vim/bundle/YouCompleteMe/install.py --clang-completer
-else
-    ${BASEDIR}/vim/bundle/YouCompleteMe/install.py
-fi
-success Ok !
