@@ -14,3 +14,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [command -v dconf > /dev/null && dconf load / < dconf.conf]
